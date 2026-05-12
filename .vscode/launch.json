@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConditionalLab",
+            "request": "launch",
+            "mainClass": "ConditionalLab.ConditionalLab",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
             "name": "TeenPower",
             "request": "launch",
             "mainClass": "TeenPower.TeenPower",
