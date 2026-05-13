@@ -4,9 +4,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class AsteroidB612 extends JPanel {
-	
+
+	String[] friends;
+	ImageIcon sheep;
+	int dy;
+
 	public AsteroidB612() {
 		//Your custom initialization code here
 		dy = 0;
@@ -14,9 +19,21 @@ public class AsteroidB612 extends JPanel {
 		String data = "The Rose, The Snake, The Lamplighter, The Businessman, The Geographer";
 		friends = data.split(",");
 		friends[2] = "The Fox";
-		for (int i = 0; i < 5; i++) {
+		/*for (int i = 0; i < friends.length; i++) {
 			System.out.println(i + ": " + friends[i]);
 		}
+		for(var f : friends) {
+			System.out.println(f + " is a friend of the Little Prince.");
+		}*/
+		int i = 0;
+		/*while(i < friends.length) {
+			System.out.println(i + ": " + friends[i]);
+			i++;
+		}*/
+		do {
+			System.out.println(i + ": " + friends[i]);
+			i++;
+		} while(i < friends.length);
 	}
 
 	@Override
@@ -36,6 +53,8 @@ public class AsteroidB612 extends JPanel {
 		g.fillRect(175+dx, 150+dy, 50, 75);
 		g.fillRect(175+dx, 225+dy, 20, 60);
 		g.fillRect(205+dx, 225+dy, 20, 60);
+
+		sheep.paintIcon(this, g, 150+dx, 300+dy);
 	}
 
 	void main() {

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AsteroidB612",
+            "request": "launch",
+            "mainClass": "Asteroid.AsteroidB612",
+            "projectName": "CS202_a2ac7601"
+        },
+        {
+            "type": "java",
+            "name": "AsteroidB612",
+            "request": "launch",
+            "mainClass": "AsteroidB612",
+            "projectName": "CS202_a2ac7601"
+        },
+        {
+            "type": "java",
             "name": "ConditionalLab",
             "request": "launch",
             "mainClass": "ConditionalLab.ConditionalLab",
