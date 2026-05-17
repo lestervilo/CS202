@@ -3,6 +3,7 @@ package Loop;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.awt.Graphics;
+import java.awt.Color;
 
 public class LoopLab extends JPanel {
     public LoopLab() {
@@ -20,6 +21,8 @@ public class LoopLab extends JPanel {
 
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
+                g.setColor(Color.BLACK);
+                g.drawRect(5, 5 , w, h);
                 System.out.printf("%4d", i * j);
             }
             System.out.println();
