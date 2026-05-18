@@ -24,9 +24,11 @@ public class LoopLab extends JPanel {
                 g.setColor(Color.BLACK);
                 g.drawRect(5, 5 , w, h);
                 g.fillRect(x, y, 20, 20);
-                System.out.printf("%4d", i * j);
+                g.drawString(String.format("%4d", i * j), x + 5, y + 15);
             }
-            System.out.println();
+            g.setColor(Color.BLACK);
+            g.drawRect(5, 5 , w, h);
+            g.fillRect(x, y, 20, 20);
         }
         
     }
