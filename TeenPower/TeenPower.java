@@ -14,7 +14,12 @@ public class TeenPower extends JPanel {
     public TeenPower() {
         // Constructor code here
         String input = JOptionPane.showInputDialog("Enter your age:");
-        age = Integer.parseInt(input);
+        try {
+            age = Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid age.");
+            age = 0; // Default to 0 if input is invalid
+        }
         img = new ImageIcon("teenpower.png");
     }
 
