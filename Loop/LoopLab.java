@@ -23,6 +23,7 @@ public class LoopLab extends JPanel {
             for (int j = 1; j <= 10; j++) {
                 g.setColor(Color.BLACK);
                 g.drawRect(5, 5 , w, h);
+                g.fillRect(x, y, 20, 20);
                 System.out.printf("%4d", i * j);
             }
             System.out.println();
@@ -30,7 +31,7 @@ public class LoopLab extends JPanel {
         
     }
 
-    public static void main(String[] args) {
+    public static void main(String [] args) {
         var frame = new JFrame();
         frame.setSize(500, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
