@@ -21,14 +21,9 @@ public class LoopLab extends JPanel {
 
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
-                g.setColor(Color.BLACK);
-                g.drawRect(5, 5 , w, h);
-                g.fillRect(x, y, 20, 20);
-                g.drawString(String.format("%4d", i * j), x + 5, y + 15);
+                System.out.printf("%4d", i * j);
             }
-            g.setColor(Color.BLACK);
-            g.drawRect(5, 5 , w, h);
-            g.fillRect(x, y, 20, 20);
+            System.out.println();
         }
         
     }
