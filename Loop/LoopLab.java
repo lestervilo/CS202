@@ -12,7 +12,7 @@ public class LoopLab extends JPanel {
     public LoopLab() {
 
         // Ask for table size
-        String input = JOptionPane.showInputDialog("Enter table size (n x n):");
+        String input = JOptionPane.showInputDialog("Enter a number (n x n):");
         String type = JOptionPane.showInputDialog("Choose table type:\n(M) Multiplication\n(A) Addition");
 
         size = Integer.parseInt(input);
@@ -58,7 +58,7 @@ public class LoopLab extends JPanel {
                 int value;
 
                 if (choice == 'A') {
-                    value = i + j;
+                    value = i + j - 1; // Adjust for header
                 } else {
                     value = i * j;
                 }
