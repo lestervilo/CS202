@@ -1,7 +1,10 @@
 package Loop;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.awt.Graphics;
+import java.awt.Color;
 
 public class LoopLab extends JPanel {
 
@@ -37,6 +40,7 @@ public class LoopLab extends JPanel {
             // Draw columns
             for (int j = 1; j <= size; j++) {
 
+                //Fixed the position
                 int x = (j - 1) * cellWidth;
                 int y = (i - 1) * cellHeight;
 
@@ -56,11 +60,16 @@ public class LoopLab extends JPanel {
 
                 // Determine value
                 int value;
-
-                if (choice == 'A') {
-                    value = i + j - 1; // Adjust for header
+                if (i == 1) {
+                    value = j; // Header row
+                } else if (j == 1) {
+                    value = i; // Header column
                 } else {
-                    value = i * j;
+                    if (choice == 'A') {
+                        value = i + j; // Adjust for header
+                    } else {
+                        value = i * j;
+                    }
                 }
 
                 // Draw number at top-left
@@ -70,14 +79,10 @@ public class LoopLab extends JPanel {
     }
 
     public static void main(String[] args) {
-
-        JFrame frame = new JFrame("Loop Lab");
-
-        frame.setSize(600, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        frame.setContentPane(new LoopLab());
-
-        frame.setVisible(true);
+        JFrame window = new JFrame("Loop Lab");
+        window.setSize(600, 600);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setContentPane(new LoopLab());
+        window.setVisible(true);
     }
 }
