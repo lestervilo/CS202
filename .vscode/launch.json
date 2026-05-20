@@ -16,6 +16,13 @@
             "name": "LoopLab",
             "request": "launch",
             "mainClass": "Loop.LoopLab",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
+            "name": "LoopLab",
+            "request": "launch",
+            "mainClass": "Loop.LoopLab",
             "projectName": "CS202_a2ac7601"
         },
         {
