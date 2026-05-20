@@ -38,11 +38,13 @@ public class FileExample extends JPanel {
         System.out.println("Now let's sort the friends alphabetically.");
         Collections.sort(friends);
 
-        for (String friend : friends) {
+        for (int i = 0; i < friends.size(); i++) {
+            String friend = friends.get(i);
+            int number = numbers.get(i);
             if (friend.equals("Alice")) {
                 continue;
             }
-            System.out.println(friend + " is your friend.");
+            System.out.println(friend + " is your friend and their number is " + number);
         }
 	}
 
