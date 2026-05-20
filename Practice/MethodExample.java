@@ -6,8 +6,18 @@ public class MethodExample extends JPanel {
     
     public MethodExample() {
         //Your custom initialization code here
-        System.out.println("Happy birthday to you!");
+        happyBirthday();
     }
+
+    public void happy() {
+         System.out.println("Happy birthday to you!");
+    }
+
+    public void happyBirthday() {
+        happy();
+        happy();
+        System.out.println("Happy Birthday");
+        happy();
 
     @Override
     public void paintComponent(java.awt.Graphics g) {
