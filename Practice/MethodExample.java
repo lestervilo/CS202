@@ -1,22 +1,24 @@
 package Practice;
 
 import javax.swing.JPanel;
+import java.swing.JFrame;
+import java.awt.Graphics;
 
 public class MethodExample extends JPanel {
     
     public MethodExample() {
         //Your custom initialization code here
-        happyBirthday();
+        happyBirthday("Eve");
     }
 
     public void happy() {
          System.out.println("Happy birthday to you!");
     }
 
-    public void happyBirthday() {
+    public void happyBirthday(String birthdayChild) {
         happy();
         happy();
-        System.out.println("Happy Birthday");
+        System.out.println("Happy Birthday dear " + birthdayChild + "!");
         happy();
 
     @Override
