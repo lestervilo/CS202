@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FileExample",
+            "request": "launch",
+            "mainClass": "FileExample.FileExample",
+            "projectName": "CS202_a2ac7601"
+        },
+        {
+            "type": "java",
             "name": "LoopLab",
             "request": "launch",
             "mainClass": "Loop.LoopLab",
