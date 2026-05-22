@@ -3,12 +3,15 @@ package Practice;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Graphics;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.Arrays;
 
 public class Arr extends JPanel{
     public Arr() {
 
     }
-}
 
 @Override
 public void paintComponent(Graphics g) {
@@ -17,8 +20,8 @@ public void paintComponent(Graphics g) {
         file = new File("friends.txt");
         Scanner s = new Scanner(file);
 
-        w = s.nextInt();
-        h = s.nextInt();
+        int w = s.nextInt();
+        int h = s.nextInt();
 
         while (s.hasNext() == true) {
             String name = s.nextLine();
@@ -36,9 +39,11 @@ public void paintComponent(Graphics g) {
     }
 }
 
-public static void main(String[] args) {
-    var window = new JFrame();
-    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    window.setSize(400,400);
-    window.setContentPane(new Arr());
+    public static void main(String[] args) {
+        var window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setSize(400,400);
+        window.setContentPane(new Arr());
+        window.setVisible(true);
+    }
 }

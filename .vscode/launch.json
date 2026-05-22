@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MethodExample",
+            "request": "launch",
+            "mainClass": "MethodExample",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
+            "name": "Arr",
+            "request": "launch",
+            "mainClass": "Practice.Arr",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
+            "name": "MethodExample",
+            "request": "launch",
+            "mainClass": "Practice.MethodExample",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
             "name": "FileExample",
             "request": "launch",
             "mainClass": "FileExample.FileExample",
