@@ -32,6 +32,7 @@ public class MethodsLab extends JPanel {
     } catch (Exception e) {
         System.out.println("Error reading file: " + e.getMessage());
     }
+}
 
     public void changeColor(int red, int green, int blue, Graphics g) {
         Color newColor = new Color(red, green, blue);
@@ -51,10 +52,42 @@ public class MethodsLab extends JPanel {
         g.drawOval(x, y, r * 2, r * 2);
     }
 
+    public void parseCommand(String command, Graphics g) {
+        String[] parts = command.split(" ");
+
+        if (parts[0].equals("COLOR")) {
+            int red = Integer.parseInt(parts[1]);
+            int green = Integer.parseInt(parts[2]);
+            int blue = Integer.parseInt(parts[3]);
+
+            changeColor(red, green, blue, g);
+        } else if (parts[0].equals("CIRCLE")) {
+            int xc = Integer.parseInt(parts[1]);
+            int yc = Integer.parseInt(parts[2]);
+            int r = Integer.parseInt(parts[3]);
+
+            drawCircle(xc, yc, r, g);
+        } else if (parts[0].equals("TRIANGLE")) {
+            int x1 = Integer.parseInt(parts[1]);
+            int y1 = Integer.parseInt(parts[2]);
+
+            int x2 = Integer.parseInt(parts[3]);
+            int y2 = Integer.parseInt(parts[4]);
+
+            int x3 = Integer.parseInt(parts[5]);
+            int y3 = Integer.parseInt(parts[6]);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3, g);
+        }
+    }
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
+        for (String command : instructions) {
+            parseCommand(command, g);
+        }
     }
 
     public static void main(String[] args) {
