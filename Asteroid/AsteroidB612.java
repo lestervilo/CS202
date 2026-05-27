@@ -58,7 +58,7 @@ public class AsteroidB612 extends JPanel {
 	}
 
 	void main() {
-		var window = new JFrame();
+		JFrame window = new JFrame();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setSize(400,400);
 		window.setContentPane(new AsteroidB612());

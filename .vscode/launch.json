@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AsteroidB613",
+            "request": "launch",
+            "mainClass": "Asteroid.AsteroidB613",
+            "projectName": "CS202_3e6e268c"
+        },
+        {
+            "type": "java",
+            "name": "AsteroidB612",
+            "request": "launch",
+            "mainClass": "Asteroid.AsteroidB612",
+            "projectName": "CS202_3e6e268c"
+        },
+        {
+            "type": "java",
+            "name": "AsteroidB612",
+            "request": "launch",
+            "mainClass": "AsteroidB612",
+            "projectName": "CS202_3e6e268c"
+        },
+        {
+            "type": "java",
             "name": "ArraysLab",
             "request": "launch",
             "mainClass": "ArraysLab.ArraysLab",
