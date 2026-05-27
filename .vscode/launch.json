@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MethodsLab",
+            "request": "launch",
+            "mainClass": "MethodsLab.MethodsLab",
+            "projectName": "CS202_3e6e268c"
+        },
+        {
+            "type": "java",
             "name": "AsteroidB613",
             "request": "launch",
             "mainClass": "Asteroid.AsteroidB613",
