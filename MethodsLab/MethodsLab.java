@@ -20,6 +20,11 @@ public class MethodsLab extends JPanel {
         try {
             String filename = JOptionPane.showInputDialog("Enter filename:");
 
+        if (filename == null) {
+            System.out.println("No file selected. Exiting.");
+            System.exit(0);
+        }
+
         File file = new File(filename);
         Scanner input = new Scanner(file);
 
