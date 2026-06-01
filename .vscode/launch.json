@@ -9,6 +9,13 @@
             "name": "MethodsLab",
             "request": "launch",
             "mainClass": "MethodsLab.MethodsLab",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
+            "name": "MethodsLab",
+            "request": "launch",
+            "mainClass": "MethodsLab.MethodsLab",
             "projectName": "CS202_3e6e268c"
         },
         {

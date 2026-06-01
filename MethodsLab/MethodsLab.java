@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class MethodsLab extends JPanel {
 
-    ArrayList<String> instructions;
+    ArrayList<String> instructions; //The array list stores all the drawing command from the file.
 
     public MethodsLab() {
         instructions = new ArrayList<>();
@@ -20,8 +20,13 @@ public class MethodsLab extends JPanel {
         try {
             String filename = JOptionPane.showInputDialog("Enter filename:");
 
+        if (filename == null) {
+            System.out.println("No file selected. Exiting.");
+            System.exit(0);
+        }
+
         File file = new File(filename);
-        Scanner input = new Scanner(file);
+        Scanner input = new Scanner(file); //This will read the text line by line.
 
         while (input.hasNextLine()) {
             instructions.add(input.nextLine());
@@ -33,13 +38,13 @@ public class MethodsLab extends JPanel {
         System.out.println("Error reading file: " + e.getMessage());
     }
 }
-
+    //Changes drawing color
     public void changeColor(int red, int green, int blue, Graphics g) {
         Color newColor = new Color(red, green, blue);
         g.setColor(newColor);
     }
 
-    public void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3, Graphics g) {
+    public void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3, Graphics g) { 
         g.drawLine(x1, y1, x2, y2);
         g.drawLine(x2, y2, x3, y3);
         g.drawLine(x3, y3, x1, y1);
@@ -53,7 +58,7 @@ public class MethodsLab extends JPanel {
     }
 
     public void parseCommand(String command, Graphics g) {
-        String[] parts = command.split(" ");
+        String[] parts = command.split(" "); //This splits the command line into separate pieces.
 
         if (parts[0].equals("COLOR")) {
             int red = Integer.parseInt(parts[1]);
@@ -85,8 +90,8 @@ public class MethodsLab extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        for (String command : instructions) {
-            parseCommand(command, g);
+        for (String command : instructions) { //loops through every line in the ArrayList
+            parseCommand(command, g); //paints all command
         }
     }
 
