@@ -10,7 +10,7 @@ public class AsteroidB612 extends JPanel {
 	private LittlePrince lester;
 	
 	public AsteroidB612() {
-		markham = new LittlePrince(50, 100);
+		markham = new LittlePrince();
 		lester = new LittlePrince(100, 50);
 		sheep = new ImageIcon("sheep.png");
 	}
