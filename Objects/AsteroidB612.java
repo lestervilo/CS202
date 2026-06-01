@@ -10,9 +10,10 @@ public class AsteroidB612 extends JPanel {
 	private LittlePrince lester;
 	
 	public AsteroidB612() {
-		markham = new LittlePrince();
-		lester = new LittlePrince(100, 50);
+		markham = new LittlePrince(Color.BLUE);
+		lester = new LittlePrince(100, 50, Color.DARK_GRAY);
 		sheep = new ImageIcon("sheep.png");
+		System.out.println("The Little Prince lives on " + markham.getLocation());
 	}
 
 	@Override
@@ -30,6 +31,7 @@ public class AsteroidB612 extends JPanel {
 		g.setColor(Color.GRAY);
 		g.fillOval(-200, 250, 800, 800);
 
+		//lester.move(-1, 0);
 		markham.draw(g);
 		lester.draw(g);
 		
