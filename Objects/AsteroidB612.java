@@ -8,10 +8,12 @@ public class AsteroidB612 extends JPanel {
 	String[] friends;
 	private LittlePrince markham;
 	private LittlePrince lester;
+	private LittlePrince eve;
 	
 	public AsteroidB612() {
 		markham = new LittlePrince(Color.BLUE);
 		lester = new LittlePrince(100, 50, Color.DARK_GRAY);
+		eve = new LittlePrince(200, 100, Color.PINK);
 		sheep = new ImageIcon("sheep.png");
 		System.out.println("The Little Prince lives on " + markham.getLocation());
 	}
@@ -34,6 +36,7 @@ public class AsteroidB612 extends JPanel {
 		//lester.move(-1, 0);
 		markham.draw(g);
 		lester.draw(g);
+		eve.draw(g);
 		
 		//draw sheep
 		sheep.paintIcon(null, g, 0, 200);
