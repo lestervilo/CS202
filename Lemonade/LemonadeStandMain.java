@@ -3,19 +3,20 @@ package Lemonade;
 import javax.swing.*;
 import java.awt.*;
 
-public class FunWithLemonadeStand extends JPanel {
+public class LemonadeStandMain extends JPanel {
 
     //Fields
-    private LemonadeStand original;
-    private LemonadeStand anotherStand;
+    private LemonadeStand stand1;
+    private LemonadeStand stand2;
 
     //Constructors
-    public FunWithLemonadeStand() {
-        original = new LemonadeStand();
-        anotherStand = new LemonadeStand(300,20);
+    public LemonadeStandMain() {
+        stand1 = new LemonadeStand();
+        stand2 = new LemonadeStand(300,20);
+        stand2.setSignColor(Color.PINK);
     }
 
-    public FunWithLemonadeStand(int x, int y, Color c){
+    public LemonadeStandMain(int x, int y, Color c){
 
     }
 
@@ -38,8 +39,8 @@ public class FunWithLemonadeStand extends JPanel {
         g.setColor(Color.YELLOW);
         g.fillOval(20, 20, 80, 80);
 
-        original.draw(g);
-        anotherStand.draw(g);
+        stand1.draw(g);
+        stand2.draw(g);
     }
 
 
@@ -47,7 +48,7 @@ public class FunWithLemonadeStand extends JPanel {
     public static void main(String[] args) {
         var window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setContentPane(new FunWithLemonadeStand());
+        window.setContentPane(new LemonadeStandMain());
         window.setSize(900,730);
         window.setVisible(true);
     }

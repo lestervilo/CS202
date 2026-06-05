@@ -13,7 +13,7 @@ public class LemonadeStand {
     //Constructors
     public LemonadeStand(){
         pos = new Point(0,0);
-        signColor = Color.YELLOW;
+        signColor = Color.MAGENTA;
         textColor = Color.BLACK;
     }
 
@@ -51,11 +51,11 @@ public class LemonadeStand {
         g.fillRect(378+pos.x, 245+pos.y, 20, 125);
 
         //The banner of the lemonade stand
-        g.setColor(Color.MAGENTA);
+        g.setColor(signColor);
         g.fillRect(160+pos.x, 170+pos.y, 250, 130);
 
         //The text on the banner
-        g.setColor(Color.BLACK);
+        g.setColor(textColor);
         g.drawString("LEMONADE : $1.00", 228+pos.x, 280+pos.y);
 
         //The LOGO of the lemonade stand LV's

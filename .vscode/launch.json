@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LemonadeStandMain",
+            "request": "launch",
+            "mainClass": "Lemonade.LemonadeStandMain",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
             "name": "FunWithLemonadeStand",
             "request": "launch",
             "mainClass": "Lemonade.FunWithLemonadeStand",
