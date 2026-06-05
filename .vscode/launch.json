@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Lemonade1",
+            "request": "launch",
+            "mainClass": "Lemonade.Lemonade1",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
+            "name": "Lemonade",
+            "request": "launch",
+            "mainClass": "Lemonade.Lemonade",
+            "projectName": "CS202_921c3c0e"
+        },
+        {
+            "type": "java",
             "name": "MethodsLab",
             "request": "launch",
             "mainClass": "MethodsLab.MethodsLab",
