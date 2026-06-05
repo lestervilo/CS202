@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FunWithPokemon",
+            "request": "launch",
+            "mainClass": "Pokemon.FunWithPokemon",
+            "projectName": "CS202_3e6e268c"
+        },
+        {
+            "type": "java",
+            "name": "PokemonGame",
+            "request": "launch",
+            "mainClass": "PokemonGame",
+            "projectName": "CS202_3e6e268c"
+        },
+        {
+            "type": "java",
             "name": "MethodsLab",
             "request": "launch",
             "mainClass": "MethodsLab.MethodsLab",
