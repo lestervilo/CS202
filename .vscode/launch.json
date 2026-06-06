@@ -6,6 +6,19 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
+            "name": "FunWithPokemon",
+            "request": "launch",
+            "mainClass": "Pokemon.FunWithPokemon",
+            "projectName": "CS202_3e6e268c"
+        },
+        {
+            "type": "java",
+            "name": "PokemonGame",
+            "request": "launch",
+            "mainClass": "PokemonGame",
+            "projectName": "CS202_3e6e268c"
+=======
             "name": "LemonadeStandMain",
             "request": "launch",
             "mainClass": "Lemonade.LemonadeStandMain",
@@ -31,6 +44,7 @@
             "request": "launch",
             "mainClass": "Lemonade.Lemonade",
             "projectName": "CS202_921c3c0e"
+>>>>>>> 6839fe5097a7b85ce997c0f36509a5a5b28ad905
         },
         {
             "type": "java",
