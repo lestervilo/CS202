@@ -12,7 +12,7 @@ public class LemonadeStandMain extends JPanel {
     //Constructors
     public LemonadeStandMain() {
         stand1 = new LemonadeStand();
-        stand2 = new LemonadeStand(300,20);
+        stand2 = new LemonadeStand(300,0);
         stand2.setSignColor(Color.PINK);
     }
 

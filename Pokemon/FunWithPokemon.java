@@ -5,17 +5,15 @@ import javax.swing.*;
 
 public class FunWithPokemon extends JPanel {
 
-    private Pokemon marksCharmander;
-    private Pokemon tomsPichu;
+    private Charmander marksCharmander;
+    private Pichu tomsPichu;
     private Pokemon another;
 
     public FunWithPokemon() {
-        marksCharmander = new Pokemon("Charmander");
+        marksCharmander = new Charmander("Charmander");
         marksCharmander.moveTo(100, 100);
-        marksCharmander.setPicture("charmander.png");
-        tomsPichu = new Pokemon("Pichu");
+        tomsPichu = new Pichu();
         tomsPichu.moveTo(300, 300);
-        tomsPichu.setPicture("pichu.png");
         another = tomsPichu; // another is a reference to the same Pokemon as tomsPichu
     }
 
