@@ -12,7 +12,7 @@ public class LemonadeStand {
 
     //Constructors
     public LemonadeStand(){
-        pos = new Point(0,0);
+        pos = new Point();
         signColor = Color.MAGENTA;
         textColor = Color.BLACK;
     }
