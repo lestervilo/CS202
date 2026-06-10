@@ -11,8 +11,7 @@ public class Room {
     private Room exitNorth;
     private Room exitSouth;
 
-    public Room(int x, int y)
-    {
+    public Room(int x, int y) {
         pos = new Point(x, y);
 
         exitEast = null;
@@ -21,26 +20,22 @@ public class Room {
         exitSouth = null;
     }
 
-    public void setEastExit(Room r)
-    {
+    public void setEastExit(Room r) {
         exitEast = r;
         r.exitWest = this;
     }
 
-    public void setWestExit(Room r)
-    {
+    public void setWestExit(Room r) {
         exitWest = r;
         r.exitEast = this;
     }
 
-    public void setNorthExit(Room r)
-    {
+    public void setNorthExit(Room r) {
         exitNorth = r;
         r.exitSouth = this;
     }
 
-    public void setSouthExit(Room r)
-    {
+    public void setSouthExit(Room r) {
         exitSouth = r;
         r.exitNorth = this;
     }
@@ -50,7 +45,6 @@ public class Room {
         int y = pos.y;
 
         int size = 50;
-        int door = 10;
 
         // NORTH
         if (exitNorth == null)

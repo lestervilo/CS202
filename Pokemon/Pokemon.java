@@ -33,7 +33,6 @@ public class Pokemon {
     }
 
     public void battle (Pokemon opponent) {
-        //TODO: implement battle logic
     }
 
     public void draw (Graphics g) {
