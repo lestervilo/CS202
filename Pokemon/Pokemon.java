@@ -16,6 +16,11 @@ public class Pokemon {
         name = n;
     }
 
+    public Pokemon(String n, int h) {
+        this(n);
+        hp = h;
+    }
+
     public void moveTo (int x, int y) {
         bounds.setLocation(x, y);
     }
@@ -28,7 +33,6 @@ public class Pokemon {
     }
 
     public void battle (Pokemon opponent) {
-        //TODO: implement battle logic
     }
 
     public void draw (Graphics g) {

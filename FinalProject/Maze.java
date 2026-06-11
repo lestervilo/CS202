@@ -6,8 +6,7 @@ import java.awt.*;
 public class Maze extends JPanel {
     private Room[][] rooms;
 
-    public Maze()
-    {
+    public Maze() {
         rooms = new Room[4][4];
 
         int startX = 50;
@@ -29,6 +28,9 @@ public class Maze extends JPanel {
         rooms[0][1].setEastExit(rooms[0][2]);
         rooms[0][2].setSouthExit(rooms[1][2]);
 
+        rooms[1][0].setSouthExit(rooms[2][0]);
+        rooms[1][0].setEastExit(rooms[1][1]);
+        rooms[2][0].setEastExit(rooms[2][1]);
         rooms[1][2].setWestExit(rooms[1][1]);
         rooms[1][1].setSouthExit(rooms[2][1]);
 
@@ -39,19 +41,17 @@ public class Maze extends JPanel {
         rooms[3][3].setWestExit(rooms[3][2]);
         rooms[3][2].setWestExit(rooms[3][1]);
         rooms[3][1].setNorthExit(rooms[2][1]);
+        rooms[2][0].setSouthExit(rooms[3][0]);
 
         setBackground(Color.WHITE);
     }
 
     @Override
-    public void paintComponent(Graphics g)
-    {
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        for (int row = 0; row < 4; row++)
-        {
-            for (int col = 0; col < 4; col++)
-            {
+        for (int row = 0; row < 4; row++) {
+            for (int col = 0; col < 4; col++) {
                 rooms[row][col].draw(g);
             }
         }

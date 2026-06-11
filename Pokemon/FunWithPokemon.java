@@ -5,18 +5,22 @@ import javax.swing.*;
 
 public class FunWithPokemon extends JPanel {
 
-    private Pokemon marksCharmander;
-    private Pokemon tomsPichu;
+    private Charmander marksCharmander;
+    private Pichu tomsPichu;
     private Pokemon another;
+    private Pokemon yetAnother;
+    private Pokemon andAnother;
 
     public FunWithPokemon() {
-        marksCharmander = new Pokemon("Charmander");
+        marksCharmander = new Charmander("Charmander");
         marksCharmander.moveTo(100, 100);
-        marksCharmander.setPicture("charmander.png");
-        tomsPichu = new Pokemon("Pichu");
+        tomsPichu = new Pichu();
         tomsPichu.moveTo(300, 300);
-        tomsPichu.setPicture("pichu.png");
         another = tomsPichu; // another is a reference to the same Pokemon as tomsPichu
+        yetAnother = new Pichu("Sparky", 40); // yetAnother is a reference to a different Pokemon than tomsPichu
+        yetAnother.moveTo(200, 200);
+        andAnother = yetAnother; // andAnother is a reference to the same Pokemon as yetAnother
+        andAnother.moveTo(500, 100);
     }
 
     @Override
@@ -25,12 +29,14 @@ public class FunWithPokemon extends JPanel {
         marksCharmander.draw(g);
         tomsPichu.draw(g);
         another.draw(g);
+        yetAnother.draw(g);
+        andAnother.draw(g);
     }
 
     public static void main(String[] args) {
         JFrame window = new JFrame("Fun with Pokemon");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setSize(600, 600);
+        window.setSize(1000, 600);
         window.setContentPane(new FunWithPokemon());
         window.setVisible(true);
     }
