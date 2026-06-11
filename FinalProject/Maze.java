@@ -12,15 +12,14 @@ public class Maze extends JPanel {
 
         int startX = 50;
         int startY = 50;
+        int spacing = 60;
 
         // Create 16 rooms
         for (int row = 0; row < 4; row++)
         {
             for (int col = 0; col < 4; col++)
             {
-                rooms[row][col] =
-                        new Room(startX + col * 60,
-                                 startY + row * 60);
+                rooms[row][col] = new Room(startX + col * spacing, startY + row * spacing); // Create a room at the appropriate position
             }
         }
 
