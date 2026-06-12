@@ -7,11 +7,11 @@ public class Maze extends JPanel {
     private Room[][] rooms;
 
     public Maze() {
-        rooms = new Room[4][4];
+        rooms = new Room[4][4]; // 4x4 grid of rooms
 
-        int startX = 50;
-        int startY = 50;
-        int spacing = 60;
+        int startX = 50; // Starting X position for the first room
+        int startY = 50; // Starting Y position for the first room
+        int spacing = 60; // Space between rooms (including room size and gap)
 
         // Create 16 rooms
         for (int row = 0; row < 4; row++)
@@ -50,6 +50,7 @@ public class Maze extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
+        // Draw all rooms
         for (int row = 0; row < 4; row++) {
             for (int col = 0; col < 4; col++) {
                 rooms[row][col].draw(g);
