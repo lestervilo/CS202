@@ -69,7 +69,7 @@ public class Room {
             g.drawLine(x + doorEnd, y + size, x + size, y + size); // Draw right part of the wall
 
             //Draw the hallway between the rooms
-            g.drawLine(x + 30, y + 50, x + 20, y + 60);
+            g.drawLine(x + 20, y + 50, x + 20, y + 60);
             g.drawLine(x + 30, y + 50, x + 30, y + 60);
         }
 
