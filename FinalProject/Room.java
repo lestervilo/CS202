@@ -21,22 +21,22 @@ public class Room {
     }
 
     public void setEastExit(Room r) {
-        exitEast = r;
+        this.exitEast = r;
         r.exitWest = this;
     }
 
     public void setWestExit(Room r) {
-        exitWest = r;
+        this.exitWest = r;
         r.exitEast = this;
     }
 
     public void setNorthExit(Room r) {
-        exitNorth = r;
+        this.exitNorth = r;
         r.exitSouth = this;
     }
 
     public void setSouthExit(Room r) {
-        exitSouth = r;
+        this.exitSouth = r;
         r.exitNorth = this;
     }
 
