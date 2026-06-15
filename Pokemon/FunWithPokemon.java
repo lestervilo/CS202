@@ -10,6 +10,7 @@ public class FunWithPokemon extends JPanel {
     private Pokemon another;
     private Pokemon yetAnother;
     private Pokemon andAnother;
+    private Bulbasaur bulbasaur;
 
     public FunWithPokemon() {
         marksCharmander = new Charmander("Charmander");
@@ -21,6 +22,8 @@ public class FunWithPokemon extends JPanel {
         yetAnother.moveTo(200, 200);
         andAnother = yetAnother; // andAnother is a reference to the same Pokemon as yetAnother
         andAnother.moveTo(500, 100);
+        bulbasaur = new Bulbasaur("Bulby");
+        bulbasaur.moveTo(700, 400);
     }
 
     @Override
@@ -31,6 +34,7 @@ public class FunWithPokemon extends JPanel {
         another.draw(g);
         yetAnother.draw(g);
         andAnother.draw(g);
+        bulbasaur.draw(g);
     }
 
     public static void main(String[] args) {

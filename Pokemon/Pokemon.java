@@ -4,7 +4,7 @@ import java.awt.*;
 
 import javax.swing.ImageIcon;
 
-public class Pokemon {
+public abstract class Pokemon {
     private int hp;
     private Rectangle bounds;
     private String name;
@@ -39,14 +39,12 @@ public class Pokemon {
         if(picture != null) {
             picture.paintIcon(null, g, bounds.x, bounds.y);
         }
-        g.drawString("I am a Pokemon named " + name + " and I have " + hp + " HP!", bounds.x, bounds.y);
+        g.drawString(greeting(), bounds.x, bounds.y);
     }
 
     public void talk () {
-        IO.println("I am a Pokemon named " + name + " and I have " + hp + " HP!");
+        IO.println(greeting());
     }
 
-    public String greeting () {
-        return "I am a Pokemon named " + name + " and I have " + hp + " HP!";
-    }
+    public abstract String greeting ();
 }
