@@ -8,6 +8,6 @@ public class Charmander extends Pokemon {
 
     @Override
     public String greeting() {
-        return "Charmander!";
+        return "Charmander! I got a flaming tail!";
     }
 }

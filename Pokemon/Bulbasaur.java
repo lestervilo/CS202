@@ -8,6 +8,6 @@ public class Bulbasaur extends Pokemon {
 
     @Override
     public String greeting() {
-        return "Bulbasaur!";
+        return "Bulbasaur! I am a Bulbasaur and I have a plant bulb on my back!";
     }
 }

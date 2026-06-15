@@ -25,6 +25,10 @@ public abstract class Pokemon {
         bounds.setLocation(x, y);
     }
 
+    public void moveBy (int dx, int dy) {
+        bounds.translate(dx, dy);
+    }
+
     public void setPicture (String filename) {
         picture = new ImageIcon(filename);
         int w = picture.getIconWidth();
@@ -47,4 +51,8 @@ public abstract class Pokemon {
     }
 
     public abstract String greeting ();
+
+    public boolean contains (int x, int y) {
+        return bounds.contains(x, y);
+    }
 }
