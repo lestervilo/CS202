@@ -21,4 +21,9 @@ public class Pichu extends Pokemon {
     public Pichu(String n, int h) {
         super(n, h);
     }
+
+    @Override
+    public String greeting() {
+        return "Pichu! I am a Pichu and I have an electric tail!";
+    }
 }

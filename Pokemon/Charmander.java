@@ -5,4 +5,9 @@ public class Charmander extends Pokemon {
         super(n, 39);
         setPicture("charmander.png");
     }
+
+    @Override
+    public String greeting() {
+        return "Charmander! I got a flaming tail!";
+    }
 }
