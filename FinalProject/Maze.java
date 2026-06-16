@@ -6,11 +6,17 @@ import java.awt.*;
 public class Maze extends JPanel {
     private Room[][] rooms; //Object reference to the 2D array of rooms
 
+    private Laban laban;
+    private Nephi nephi;
+    private Sword sword;
+    private Plates plates;
+
     public Maze() {
         rooms = new Room[4][4];
 
         int startX = 50;
         int startY = 50;
+        int spacing = 60;
 
         // Create 16 rooms
         for (int row = 0; row < 4; row++)
@@ -18,8 +24,7 @@ public class Maze extends JPanel {
             for (int col = 0; col < 4; col++)
             {
                 rooms[row][col] =
-                        new Room(startX + col * 60,
-                                 startY + row * 60);
+                        new Room(startX + col * spacing, startY + row * spacing);
             }
         }
 
@@ -45,6 +50,18 @@ public class Maze extends JPanel {
         rooms[3][2].setWestExit(rooms[3][1]);
         rooms[3][2].setNorthExit(rooms[2][2]);
 
+        // Create characters and items
+        nephi = new Nephi();
+        laban = new Laban();
+        sword = new Sword();
+        plates = new Plates();
+
+        // Place characters and items in rooms
+        nephi.setCurrentRoom(rooms[3][0]);
+        laban.setCurrentRoom(rooms[0][2]);
+        sword.setCurrentRoom(rooms[1][3]);
+        plates.setCurrentRoom(rooms[0][3]);
+
         setBackground(Color.WHITE);
     }
 
@@ -57,6 +74,12 @@ public class Maze extends JPanel {
                 rooms[row][col].draw(g);
             }
         }
+
+        // Draw characters and items
+        nephi.draw(g);
+        laban.draw(g);
+        sword.draw(g);
+        plates.draw(g);
     }
 
     public static void main(String[] args)

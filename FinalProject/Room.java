@@ -40,6 +40,10 @@ public class Room {
         r.exitNorth = this;
     }
 
+    public Point getPosition() {
+        return pos;
+    }
+
     public void draw(Graphics g) {
         int x = pos.x; // X position of the room
         int y = pos.y; // Y position of the room
