@@ -8,6 +8,7 @@ public class Sprite {
     protected Room currentRoom;
     protected ImageIcon image;
 
+    // Constructor
     public Sprite() {
         currentRoom = null;
         image = null;
@@ -22,16 +23,22 @@ public class Sprite {
     }
 
     public void draw(Graphics g) {
+        // Safety check — don't draw if no room is assigned
         if (currentRoom == null) return;
 
+        // Get the room's top-left corner position
         Point pos = currentRoom.getPosition();
         int roomSize = 50;
 
+        // Measure the image dimensions
         int imgWidth = image.getIconWidth();
         int imgHeight = image.getIconHeight();
+
+        // Calculate centered position inside the room
         int drawX = pos.x + (roomSize - imgWidth) / 2;
         int drawY = pos.y + (roomSize - imgHeight) / 2;
 
+        // Paint the image at the centered position
         image.paintIcon(null, g, drawX, drawY);
     }
 }

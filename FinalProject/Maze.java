@@ -23,8 +23,7 @@ public class Maze extends JPanel {
         {
             for (int col = 0; col < 4; col++)
             {
-                rooms[row][col] =
-                        new Room(startX + col * spacing, startY + row * spacing);
+                rooms[row][col] = new Room(startX + col * spacing, startY + row * spacing);
             }
         }
 
@@ -62,7 +61,7 @@ public class Maze extends JPanel {
         sword.setCurrentRoom(rooms[1][3]);
         plates.setCurrentRoom(rooms[0][3]);
 
-        setBackground(Color.WHITE);
+        setBackground(Color.LIGHT_GRAY);
     }
 
     @Override

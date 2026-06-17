@@ -41,7 +41,7 @@ public class Room {
     }
 
     public Point getPosition() {
-        return pos;
+        return pos; 
     }
 
     public void draw(Graphics g) {
