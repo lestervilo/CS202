@@ -14,10 +14,12 @@ public class Sprite {
         image = null;
     }
 
+    // Assigns the room where this sprite will be drawn
     public void setCurrentRoom(Room r) {
         currentRoom = r;
     }
 
+    // Returns the room this sprite is currently in
     public Room getCurrentRoom() {
         return currentRoom;
     }

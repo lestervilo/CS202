@@ -40,6 +40,7 @@ public class Room {
         r.exitNorth = this;
     }
 
+    // Returns the pixel position of this room's top-left corner
     public Point getPosition() {
         return pos; 
     }
