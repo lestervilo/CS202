@@ -20,6 +20,7 @@ public class Pichu extends Pokemon {
 
     public Pichu(String n, int h) {
         super(n, h);
+        setType(ELECTRIC);
     }
 
     @Override
