@@ -45,6 +45,40 @@ public class Room {
         return pos; 
     }
 
+    //Exit Checkers
+    public boolean hasNorthExit() {
+        return exitNorth != null;
+    }
+
+    public boolean hasSouthExit() {
+        return exitSouth != null;
+    }
+
+    public boolean hasEastExit() {
+        return exitEast != null;
+    }
+
+    public boolean hasWestExit() {
+        return exitWest != null;
+    }
+
+    //Exit Getters
+    public Room getNorthExit() {
+        return exitNorth;
+    }
+
+    public Room getSouthExit() {
+        return exitSouth;
+    }
+
+    public Room getEastExit() {
+        return exitEast;
+    }
+
+    public Room getWestExit() {
+        return exitWest;
+    }
+
     public void draw(Graphics g) {
         int x = pos.x; // X position of the room
         int y = pos.y; // Y position of the room

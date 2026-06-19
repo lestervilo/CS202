@@ -2,8 +2,10 @@ package FinalProject;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
 
-public class Maze extends JPanel {
+public class Maze extends JPanel implements KeyListener {
     private Room[][] rooms; //Object reference to the 2D array of rooms
 
     private Laban laban;
@@ -62,11 +64,15 @@ public class Maze extends JPanel {
         plates.setCurrentRoom(rooms[0][3]);
 
         setBackground(Color.LIGHT_GRAY);
+
+        addKeyListener(this);
     }
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+
+        requestFocusInWindow();
 
         for (int row = 0; row < 4; row++) {
             for (int col = 0; col < 4; col++) {
@@ -80,6 +86,28 @@ public class Maze extends JPanel {
         sword.draw(g);
         plates.draw(g);
     }
+
+    public void keyTyped(KeyEvent e) {}
+
+    public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
+
+        // Nephi
+        if (key == KeyEvent.VK_UP) nephi.moveNorth();
+        if (key == KeyEvent.VK_DOWN) nephi.moveSouth();
+        if (key == KeyEvent.VK_LEFT) nephi.moveWest();
+        if (key == KeyEvent.VK_RIGHT) nephi.moveEast();
+
+        // Laban
+        if (key == KeyEvent.VK_W) laban.moveNorth();
+        if (key == KeyEvent.VK_S) laban.moveSouth();
+        if (key == KeyEvent.VK_A) laban.moveWest();
+        if (key == KeyEvent.VK_D) laban.moveEast();
+
+        repaint();
+    }
+
+    public void keyReleased(KeyEvent e){}
 
     public static void main(String[] args)
     {

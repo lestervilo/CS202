@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.Point;
 import javax.swing.ImageIcon;
 
-public class Sprite {
+public abstract class Sprite {
     protected Room currentRoom;
     protected ImageIcon image;
 
@@ -22,6 +22,30 @@ public class Sprite {
     // Returns the room this sprite is currently in
     public Room getCurrentRoom() {
         return currentRoom;
+    }
+
+    public void moveSouth() {
+        if (currentRoom.hasSouthExit()) {
+            currentRoom = currentRoom.getSouthExit();
+        }
+    }
+
+    public void moveNorth() {
+        if (currentRoom.hasNorthExit()) {
+            currentRoom = currentRoom.getNorthExit();
+        }
+    }
+
+    public void moveEast() {
+        if (currentRoom.hasEastExit()) {
+            currentRoom = currentRoom.getEastExit();
+        }
+    }
+
+    public void moveWest() {
+        if (currentRoom.hasWestExit()) {
+            currentRoom = currentRoom.getWestExit();
+        }
     }
 
     public void draw(Graphics g) {
