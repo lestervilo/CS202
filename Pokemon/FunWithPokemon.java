@@ -10,14 +10,15 @@ import java.util.ArrayList;
 
 public class FunWithPokemon extends JPanel implements MouseListener, MouseMotionListener {
 
-    private Charmander marksCharmander;
-    private Pichu tomsPichu;
-    private Bulbasaur lester;
+    private Pokemon marksCharmander;
+    private Pokemon tomsPichu;
+    private Pokemon lester;
     private ArrayList<Pokemon> pokemonList;
     private Pokemon selected;
     private Point previousxy;
 
     public FunWithPokemon() {
+        int maddox = Pokemon.ELECTRIC;
         addMouseListener(this);
         addMouseMotionListener(this);
         marksCharmander = new Charmander("Charmander");
@@ -30,6 +31,7 @@ public class FunWithPokemon extends JPanel implements MouseListener, MouseMotion
         pokemonList.add(marksCharmander);
         pokemonList.add(tomsPichu);
         pokemonList.add(lester);
+        lester.talk();
     }
 
     @Override

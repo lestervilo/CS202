@@ -9,6 +9,21 @@ public abstract class Pokemon {
     private Rectangle bounds;
     private String name;
     private ImageIcon picture;
+    private int type;
+
+    public static final int NORMAL = 0;
+    public static final int FIRE = 1;
+    public static final int WATER = 2;
+    public static final int GRASS = 3;
+    public static final int GHOST = 4;
+    public static final int DRAGON = 5;
+    public static final int STEEL = 6;
+    public static final int DARK = 7;
+    public static final int ELECTRIC = 8;
+    public static final int POISON = 5;
+    public static final int FLYING = 6;
+    public static final int FAIRY = 7;
+    public static final int FIGHTING = 8;
 
     public Pokemon(String n) {
         hp = 100;
@@ -37,6 +52,10 @@ public abstract class Pokemon {
     }
 
     public void battle (Pokemon opponent) {
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public void draw (Graphics g) {
