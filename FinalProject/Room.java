@@ -3,13 +3,15 @@ package FinalProject;
 import java.awt.Graphics;
 import java.awt.Point;
 
-public class Room {
+public class Room implements Drawable {
     private Point pos;
 
     private Room exitEast;
     private Room exitWest;
     private Room exitNorth;
     private Room exitSouth;
+
+    public static final int SIZE = 50;
 
     public Room(int x, int y) {
         pos = new Point(x, y);

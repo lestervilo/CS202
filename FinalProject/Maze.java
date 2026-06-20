@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 public class Maze extends JPanel implements KeyListener {
     private Room[][] rooms; //Object reference to the 2D array of rooms
@@ -12,6 +13,7 @@ public class Maze extends JPanel implements KeyListener {
     private Nephi nephi;
     private Sword sword;
     private Plates plates;
+    private ArrayList<Drawable> drawables;
 
     public Maze() {
         rooms = new Room[4][4];
@@ -57,15 +59,20 @@ public class Maze extends JPanel implements KeyListener {
         sword = new Sword();
         plates = new Plates();
 
+        setBackground(Color.LIGHT_GRAY);
+
+        addKeyListener(this);
+
+        reset();
+    }
+
+    private void reset() {
         // Place characters and items in rooms
+        nephi.reset();
         nephi.setCurrentRoom(rooms[3][0]);
         laban.setCurrentRoom(rooms[0][2]);
         sword.setCurrentRoom(rooms[1][3]);
         plates.setCurrentRoom(rooms[0][3]);
-
-        setBackground(Color.LIGHT_GRAY);
-
-        addKeyListener(this);
     }
 
     @Override
@@ -97,6 +104,25 @@ public class Maze extends JPanel implements KeyListener {
         if (key == KeyEvent.VK_DOWN) nephi.moveSouth();
         if (key == KeyEvent.VK_LEFT) nephi.moveWest();
         if (key == KeyEvent.VK_RIGHT) nephi.moveEast();
+
+        if (nephi.getCurrentRoom() == sword.getCurrentRoom()) {
+            nephi.pickUpSword();
+            sword.setCurrentRoom(null); //remove the sword from the maze
+        }
+
+        if (nephi.getCurrentRoom() == plates.getCurrentRoom()) {
+            JOptionPane.showMessageDialog(this, "Nephi retrieved the brass plates! You win!");
+            reset();
+        }
+
+        if (nephi.getCurrentRoom() == laban.getCurrentRoom()) {
+            if (nephi.isArmed()) {
+                laban.setCurrentRoom(null);
+            } else {
+                JOptionPane.showMessageDialog(this, "Laban defeated Nephi! Try again.");
+                reset();
+            }
+        }
 
         // Laban
         if (key == KeyEvent.VK_W) laban.moveNorth();

@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.Point;
 import javax.swing.ImageIcon;
 
-public abstract class Sprite {
+public abstract class Sprite implements Drawable {
     protected Room currentRoom;
     protected ImageIcon image;
 
