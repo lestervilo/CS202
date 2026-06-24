@@ -13,9 +13,12 @@ public class Maze extends JPanel implements KeyListener {
     private Nephi nephi;
     private Sword sword;
     private Plates plates;
+
+    //Single ArrayList holding every Room and Sprite
     private ArrayList<Drawable> drawables;
 
     public Maze() {
+        drawables = new ArrayList<Drawable>();
         rooms = new Room[4][4];
 
         int startX = 50;
@@ -28,6 +31,7 @@ public class Maze extends JPanel implements KeyListener {
             for (int col = 0; col < 4; col++)
             {
                 rooms[row][col] = new Room(startX + col * spacing, startY + row * spacing);
+                drawables.add(rooms[row][col]);
             }
         }
 
@@ -59,6 +63,11 @@ public class Maze extends JPanel implements KeyListener {
         sword = new Sword();
         plates = new Plates();
 
+        drawables.add(nephi);
+        drawables.add(laban);
+        drawables.add(plates);
+        drawables.add(sword);
+
         setBackground(Color.LIGHT_GRAY);
 
         addKeyListener(this);
@@ -81,17 +90,9 @@ public class Maze extends JPanel implements KeyListener {
 
         requestFocusInWindow();
 
-        for (int row = 0; row < 4; row++) {
-            for (int col = 0; col < 4; col++) {
-                rooms[row][col].draw(g);
-            }
+        for (Drawable d : drawables) {
+            d.draw(g);
         }
-
-        // Draw characters and items
-        nephi.draw(g);
-        laban.draw(g);
-        sword.draw(g);
-        plates.draw(g);
     }
 
     public void keyTyped(KeyEvent e) {}
