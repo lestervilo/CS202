@@ -14,7 +14,7 @@ public class PokemonGame extends JPanel implements KeyListener {
     public PokemonGame() {
         roster = new ArrayList<>();
         spawnPokemon();
-        
+
         // Setup for the KeyListener
         setFocusable(true);
         addKeyListener(this);

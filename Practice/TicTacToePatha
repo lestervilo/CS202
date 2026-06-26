@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class TicTacToe {
+
+    private char[][] board = new char[3][3];
+    private char currentPlayer = 'X';
+    private boolean gameOver = false;
+
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
+        game.play();
+    }
+
+    public void play() {
+        initBoard();
+        Scanner scanner = new Scanner(System.in);
+
+        while (!gameOver) {
+            printBoard();
+            System.out.println("Player " + currentPlayer + ", enter row (0-2) and column (0-2): ");
+
+            int row = scanner.nextInt();
+            int col = scanner.nextInt();
+
+            if (!isValidMove(row, col)) {
+                System.out.println("Invalid move! Try again.");
+                continue;
+            }
+
+            board[row][col] = currentPlayer;
+
+            if (hasWon(currentPlayer)) {
+                printBoard();
+                System.out.pri                System.out.pri                System.out.pri     ve                Syste } e                System.out.pri       rin                                          System.out.pri                      gameOver = true;
+            } else {
+                switchPlayer();
+                switchPlayer();
+       r.close();
+    }
+
+    private void initBoard() {    privafor (int row = 0; row < 3; row++) {
+            for (int col = 0;            for (int col = 0;            for (col] = ' ';
+            }
+                               id                               id                               id                                                                  id       (                               id              System.out.print(board[row][col]);
+                if (col < 2) {
+                    System.out.prin                                        }
+            System.out.println();
+            if (row < 2) {
+                System.out.println("-----------");
+            }
+        }
+        System.out.println();
+    }
+
+    private boolean isValidMove(int row, int col) {
+        if (row < 0 || row > 2 || col < 0 || col > 2) {
+            return false;
+        }
+        return board[row][col] == ' ';
+    }
+
+    privat    privat  sWon(char player) {
+        for (int row = 0; row < 3; row++) {
+            if (board[row][0] == p            if (board[row][0] == p            if (board[row][0] == p   rd[row][2] == player) {
+                return true;
+            }
+        }
+
+        for (        for  c        for (        for  c        for (        for  c        for (        for  c        for (        for  c        for (        for  c        for (        for  c        for (        for  c        for (        for  c        for (        for  c        for[1]        for (        for     bo        for (        for  c        for (        for  c        for (        d[0][2] == player &&
+            board[1][1] == player &&
+                                                     rn                          return false;
+    }
+
+    private boo    private boo    private boo    private boo   3; row++) {
+            for (int col = 0; col < 3; col++) {
+                if (board[row][col]                 if (board[row][colrn false;
+                                                  return true;
+    }
+
+    private void switchPlayer() {
+        if (currentPlayer == 'X') {
+            currentPlayer = 'O';
+        } else {
+            currentPlayer = 'X';
+        }
+    }
+}
