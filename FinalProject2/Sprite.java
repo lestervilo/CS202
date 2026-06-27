@@ -2,6 +2,7 @@ package FinalProject2;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.*;
 
 public abstract class Sprite {
     private ImageIcon img;
@@ -16,18 +17,22 @@ public abstract class Sprite {
         img = new ImageIcon();
         int imgWidth = img.getIconWidth();
         int imgHeight = img.getIconHeight();
+        bounds.setSize(imgHeight, imgWidth);
     }
 
     public void setLocation(int x, int y) {
         this.bounds = new Rectangle(x,y);
     }
 
-    public void offset(int dx, int dy) {
 
+    public void offset(int dx, int dy) {
+        bounds.translate(dx, dy);
     }
 
     public void draw(Graphics g) {
-        
+        if(img != null) {
+            img.paintIcon(null, g, bounds.x, bounds.y);
+        }
     }
 
     public boolean touches(Sprite other) {
